@@ -1,0 +1,554 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)) ,url(../img/banner.png);
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    padding-top: 2em;
+    margin: auto;
+}
+
+header img {
+    width: 9em;
+    
+}
+header nav a {
+    text-decoration: none;
+    margin-right: 1em;
+    color: white;
+    text-align: center;
+    transition: 0.5s ease;
+    display: inline-block;
+    position: relative;
+}
+header nav a::after {
+    content: ' ';
+    height: 2px;
+    background-color: #f44336;
+    display: block;
+    width: 0;
+    transition: 0.5s ease;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* header nav a:hover {
+    
+    color: #f44336;
+} */
+header nav a:hover::after {
+    
+    width: 100%;
+}
+header .bars {
+    display: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 100;
+    margin-top: -2em;
+    margin-right: -1em;
+    
+}
+header span {
+    background-color: #fff3f3;
+    height: 3px;
+    width: 20px;
+    margin: 3px;
+    display: block;
+}
+.content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.content h2 {
+    text-align: center;
+    font-size: 2.8em;
+    padding: 1em;
+    color:  white;
+    font-weight: 500;
+    width: 100vw;
+}
+.content p {
+    color: white;
+    padding-bottom: 2em;
+    text-align: center;
+    width: 70%;
+    margin: auto;
+}
+.content .btn{
+    display: flex;
+    justify-content: center;
+}
+.content .btn p{
+    text-align: center;
+    border: 1px solid white;
+    padding: 1em 2em ;
+    width: fit-content;
+    transition:  0.5s ease;
+}
+.content .btn p a{
+    color: white;
+    text-decoration: none;
+}
+.content .btn p:hover{
+    
+    background-color: #f44336;
+}
+.course {
+    padding-top: 4em;
+    margin: auto;
+}
+.course h3 {
+    margin: auto;
+    text-align: center;
+    width: 90%;
+}
+.course p {
+    text-align: center;
+    padding-bottom: 2.5em;
+    color: #777;
+    font-size: 14px;
+    width: 80%;
+    margin: auto;
+}
+.container {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    padding-bottom: 3em;
+}
+.container .course-card {
+    text-align: center;
+    background-color: #fff3f3;
+    padding: 1em;
+    flex-basis: 30%;
+    transition: 0.5s ease;
+}
+.container .course-card:hover {
+    box-shadow:0 5px 25px rgba(94, 92, 92, 0.548);
+}
+.container .course-card h4 {
+    padding-bottom: 1em;
+}
+.container .course-card p {
+    padding-bottom: 0em;
+}
+.our-campus {
+    margin: auto;
+    padding-top: 4em;
+}
+.our-campus h3 {
+    margin: auto;
+    text-align: center;
+}
+.our-campus>p {
+    margin: auto;
+    text-align: center;
+    padding-bottom: 2em;
+    width: 80%;
+}
+.our-campus .col {
+    flex-basis: 30%;
+    position: relative;
+}
+.our-campus .col img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+.our-campus .col .layer{
+    position: absolute;
+    background-color: rgba(226, 0, 0, 0.7);
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    transition: 0.5s ease;
+}
+.our-campus .col p {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.5s ease;
+    opacity: 0;
+}
+.our-campus .col:hover .layer {
+    opacity: 0.7;
+}
+.our-campus .col:hover p {
+    bottom: 49%;
+    opacity: 1;
+}
+.our-campus .card-faciliti {
+    padding: 1em;
+    flex-basis: 30%;
+}
+.our-campus .card-faciliti img {
+    border-radius: 5px;
+    width: 100%;
+}
+.our-campus .card-faciliti h4 {
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+.our-campus .card-faciliti p {
+    font-size: 0.75em;
+    color: rgba(170, 155, 155, 0.671);
+}
+.container-test {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+}
+.container-test .test-card {
+    background-color: antiquewhite;
+    display: flex;
+    flex-basis: 48%;
+    padding: 1.0em;
+}
+.container-test img {
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+}
+.container-test .test-card .info-test {
+    padding-left: 1em;
+}
+.container-test .test-card .info-test>p{
+    font-size: 0.8em;
+    color: rgba(4, 5, 5, 0.959);
+    padding-bottom: 1.2em;
+}
+
+.contact {
+    background-image: url(../img/banner2.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 80%;
+    margin: 10em auto;
+    padding: 5em;
+    border-radius: 10px;
+}
+.contact h2 {
+    text-align: center;
+    margin: auto;
+    color: white;
+}
+.contact p {
+    text-align: center;
+    color: white;
+    border: 1px solid white;
+    width: fit-content;
+    padding: 0.6em 2.0em;
+    margin: 1em auto;
+    transition: 0.5s ease;
+}
+.contact p:hover {
+    background-color: #f44336;
+}
+footer {
+    width: 80%;
+    margin: 3em auto 2em;
+    text-align: center;
+}
+footer h4 {
+    padding-bottom: 2em;
+}
+footer p {
+    color: rgba(43, 39, 34, 0.753);
+    padding-bottom: 1em;
+}
+.social-icons {
+    color:blueviolet;
+}
+.social-icons .fa-brands {
+    padding:1em 1em;
+    cursor: pointer;
+}
+/* ------------ about page ----------- */
+.sub-main {
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)) ,url(../img/banner.png);
+    background-position: center;
+    background-size: cover;
+    height: 50vh;
+    position: relative;
+}
+.sub-main h2 {
+    padding-top: 3em;
+    margin: auto;
+    text-align: center;
+}
+.data {
+    width: 100vw;
+    margin: 10em auto 0;
+}
+.data .container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+
+}
+.data .label {
+    flex-basis: 45%;
+}
+.data .label h4 {
+    font-size: 2em;
+    padding-bottom: 0.8em;
+}
+.data .label p {
+    font-size: 0.8em;
+    color: rgba(15, 17, 17, 0.671);
+    padding-bottom: 1.5em;
+}
+.data .label .btn p {
+    text-align: center;
+    border: 1px solid rgb(218, 42, 42);
+    padding: 1em 2em ;
+    width: fit-content;
+    transition:  0.5s ease;
+    color: red;
+    cursor: pointer;
+}
+.data .label .btn p:hover {
+    background-color: red;
+    color: white;
+}
+.data img {
+    width: 45%;
+}
+/* ------ courses ------- */
+.sub-main h3 {
+    margin: auto;
+    text-align: center;
+    padding-top: 2em;
+    font-size: 2em;
+}
+/* -------blog------ */
+.blog-main {
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)) ,url(../img/background.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 50vh;
+    position: relative;
+}
+.blog-main h3 {
+    margin: auto;
+    text-align: center;
+    padding-top: 2em;
+    font-size: 2em;
+}
+.blog-data .container {
+    margin-top: 2em;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+.blog-data .container .left-col {
+    flex-basis: 55%;
+}
+.blog-data .container .left-col h4 {
+    padding-bottom: 1.8em;
+}
+.blog-data .container .left-col p {
+    font-size: 0.8em;
+    color: rgba(53, 51, 48, 0.37);
+}
+.blog-data .container img {
+    width: 100%;
+    padding-bottom: 1.5em;
+}
+.blog-data .container .right-col {
+    flex-basis: 38%;
+}
+.blog-data .container .right-col h5 {
+    text-align: center;
+    padding: 0.8em 1em;
+    background-color: #f44336;
+    color: white;
+    width: 100%;
+}
+.blog-data .container .right-col .cat-data {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1em;
+}
+.blog-data form {
+    border: 1px solid rgba(0, 0, 0, 0.144);
+    margin-top: 1em;
+    padding: 1em;
+}
+.blog-data form h4 {
+    /* border: 1px solid red; */
+    padding: 0;
+    margin-bottom: -1em;
+}
+.blog-data form input{
+    width: 100%;
+    margin-bottom: 1em;
+    background-color: rgb(236, 226, 226);
+    border: none;
+    padding: 0.25em;
+}
+.blog-data form textarea {
+    width: 100%;
+    background-color: rgb(236, 226, 226);
+    border: none;
+    padding: 0.25em;
+    margin-bottom: 1em;
+}
+.blog-data form button {
+    padding: 0.5em;
+    color: rgb(12, 11, 11);
+    border: 1px solid black;
+}
+.blog-data form button:hover {
+    background-color: red;
+    color: white;
+}
+/* ------contact us-------- */
+.location {
+    width: 80%;
+    margin: auto;
+    padding-top: 2em;
+}
+iframe {
+    width: 100%;
+}
+
+/* ------ contact info ----- */
+.contact-info {
+    display: flex;
+    width: 80%;
+    margin: 8em auto;
+    justify-content: space-between;
+}
+.contact-left {
+    flex-basis: 30%;
+}
+.contact-card {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 2em;
+}
+.contact-card i {
+    padding-top: 1em;
+    padding-right: 2em;
+    color: brown;
+}
+.contact-right {
+    flex-basis: 50%;
+}
+.contact-right input {
+    width: 100%;
+    border: 1px solid black;
+}
+.contact-right textarea {
+    width: 100%;
+}
+.contact-info form {
+    border: 1px solid rgba(0, 0, 0, 0.144);
+    width: 100%;
+    padding: 1em;
+    
+}
+.contact-info form input{
+    margin-bottom: 1em;
+    padding: 0.5em;
+    
+}
+.contact-info form textarea{
+    padding: 0.5em;
+    
+}
+.contact-info form button{
+    padding: 00.5em 1em;
+    color: red;
+}
+.contact-info form button:hover{
+    background-color: red;
+    color: white;
+}
+@media(max-width:770px){
+        header .bars {
+        display: inline-block;
+    }
+    header nav {
+        display: none;
+    }
+    .content h2 {
+        font-size: 2em;
+    }
+    .container {
+        flex-direction: column;
+        gap: 1em;
+    }
+    .container-test {
+        flex-direction: column;
+        gap: 1em;
+    }
+    .contact {
+        padding: 0;
+        margin-top: 4em;
+        padding-top: 2em;
+        padding-bottom: 2em;
+        margin-bottom: 3em;
+    }
+    .contact h2 {
+        font-size: 1em;
+        margin: auto;
+        text-align: center;
+    }
+    .contact p {
+        margin-top: 2em;
+        padding: 0.2em 0.7em;
+    }
+    footer {
+        margin-top: 1em
+    }
+    header nav {
+        display: flex;
+        flex-direction: column;
+        background-color: #f44336;
+        height: 100vh;
+        width: 10em;
+        position: fixed;
+        z-index: 2;
+        top: 0%;
+        right: -200%;
+        padding-top: 4em;
+        padding-right: 0.3em;
+        padding-left: 0.3em;
+        transition: 0.5s ease;
+        
+    }
+    header nav a{
+        padding-bottom: 1em;
+    }
+    header .active {
+        right: 0%;
+    }
+    
+}
