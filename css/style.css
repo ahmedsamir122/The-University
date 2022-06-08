@@ -550,5 +550,9 @@ iframe {
     header .active {
         right: 0%;
     }
+    .contact-info{
+        flex-direction: column;
+        margin: auto;
+    }
     
 }
